@@ -55,7 +55,6 @@ async function updateGoldPrice(env: { BACKEND_URL: string }) {
 
     console.log('Gold price updated successfully in the backend.');
 
-    // Call the update-product-prices API to change the price of every product
     const updateProductPricesResponse = await fetch(`${env.BACKEND_URL}/gold-price/update-product-prices`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
